@@ -1,0 +1,34 @@
+body{
+    font-family: Arial, sans-serif;
+
+}
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #9d96ac8d; 
+    min-height: 50vh;
+}
+
+
+.category-card {
+    background-color: #fbf3f3;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 200px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.category-card .category-link{
+    text-decoration: none;
+}
+

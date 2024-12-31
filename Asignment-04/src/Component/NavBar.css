@@ -1,0 +1,32 @@
+/* Styling for the NavBar component */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: #c3d6eb; 
+}
+
+.navbar-link:active {
+    color: #0056b3; 
+}
