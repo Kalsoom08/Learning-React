@@ -1,15 +1,27 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Task } from "./components/Task";
+import React from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Categories from './Pages/Categories';
+import CategoryProduct from './Pages/CategoryProduct';
+import AllProducts from './Pages/AllProducts/AllProducts';
+import NavBar from './Component/NavBar';
+import ProductsDetail from './Pages/ProductDetail/ProductsDetail';
+import CreatePage from './Pages/CreateProductPage/CreatePage';
+import Hero from './Component/Hero';
 
 const App = () => {
-  const tasks = useSelector((state) => state.tasks);
-  const dispatch = useDispatch();
+  const location = useLocation(); 
 
   return (
     <div>
-      <Task />
-    
+      <NavBar />
+      {location.pathname === '/' && <Hero />}
+      <Routes>
+        <Route path="/" element={<AllProducts />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/categoryProduct/:prodID" element={<CategoryProduct />} />
+        <Route path="/product/:detailID" element={<ProductsDetail />} />
+        <Route path="/createPage" element={<CreatePage />} />
+      </Routes>
     </div>
   );
 };
