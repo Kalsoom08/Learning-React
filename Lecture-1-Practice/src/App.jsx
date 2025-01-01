@@ -1,5 +1,35 @@
-// import React, { useState } from 'react'
-// import '../src/App.css'
+import React, { useState } from 'react'
+// import '../src/App.css''
+
+const App = () => {
+    const [tempData, setTempData] = useState('');
+    const [perData, setperData] = useState('');
+   
+
+    const handleChange = (event) =>
+        {
+            setTempData(event.target.value)
+        }
+
+    const handleData = () =>
+        {
+        setperData(tempData)
+        }
+
+  return (
+    <div>
+    <input 
+    value={tempData}
+    onChange={handleChange}
+    type="text" />
+
+    <button onClick={handleData}>Change Text</button>
+    <h1>{perData}</h1>
+    </div>
+  )
+}
+
+export default App
 
 // function App() {
 //   let [renderName, setRenderName] = useState();
@@ -33,6 +63,5 @@
 //   </> )
 // }
 // export default App
-
 
 
